@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>サンプルページ</title>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .image-container {
+        margin: 30px 0;
+        text-align: center;
+      }
+      .hover-image {
+        cursor: pointer;
+        border: 3px solid #ddd;
+        border-radius: 8px;
+        transition: border-color 0.3s;
+      }
+      .hover-image:hover {
+        border-color: #4a90e2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>サンプルページ</h1>
+    <p>これはサンプルページです。</p>
+    <ul>
+      <li>千葉市産業振興センター</li>
+      <li>千葉市産業振興財団</li>
+    </ul>
+
+    <div class="image-container">
+      <h2>jQuery 画像切り替えデモ</h2>
+      <p>画像にマウスを乗せると切り替わります</p>
+      <img
+        class="hover-image"
+        src="images/1.png"
+        alt="画像切り替えデモ"
+        data-original="images/1.png"
+        data-hover="images/2.png"
+      />
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        // マウスオーバーで画像を切り替え
+        $(".hover-image").on("mouseenter", function () {
+          const hoverSrc = $(this).data("hover");
+          $(this).attr("src", hoverSrc);
+        });
+
+        // マウスが離れたら元の画像に戻す
+        $(".hover-image").on("mouseleave", function () {
+          const originalSrc = $(this).data("original");
+          $(this).attr("src", originalSrc);
+        });
+
+        // コンソールに jQuery バージョンを表示（動作確認用）
+        console.log("jQuery version:", $.fn.jquery);
+        console.log("画像切り替え機能が有効になりました");
+      });
+    </script>
+  </body>
+</html>

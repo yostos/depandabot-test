@@ -1,0 +1,9 @@
+{
+  "name": "dependabot-test-jquery",
+  "version": "1.0.0",
+  "description": "Test project for GitHub Dependabot and security features",
+  "private": true,
+  "dependencies": {
+    "jquery": "3.4.1"
+  }
+}
