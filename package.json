@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "description": "Test project for GitHub Dependabot and security features",
   "private": true,
+  "scripts": {
+    "lint": "htmlhint \"**/*.html\"",
+    "lint:fix": "htmlhint \"**/*.html\" --format=compact"
+  },
   "dependencies": {
     "jquery": "3.4.1"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.8.0"
   }
 }
