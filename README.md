@@ -1,5 +1,7 @@
 # Dependabot Test Project - jQuery
 
+[![HTML Lint](https://github.com/yostos/depandabot-test/actions/workflows/html-lint.yml/badge.svg)](https://github.com/yostos/depandabot-test/actions/workflows/html-lint.yml)
+
 GitHub Dependabot とセキュリティ機能をテストするためのプロジェクトです。意図的に脆弱性を含む jQuery 3.4.1 を使用しています。
 
 ## 概要
